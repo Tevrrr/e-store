@@ -7,6 +7,8 @@ import Header from '../components/Pages/Main/Header';
 
 import MainContainer from '../components/MainContainer';
 import Category from '../components/Pages/Main/Category';
+import Benefits from '../components/Pages/Main/Benefits';
+
 
 
 export default function Home() {
@@ -14,8 +16,8 @@ export default function Home() {
     return (
         <MainContainer>
             <Header />
-            <Category/>
-            {/* <Box sx={{height:'500vh'}}></Box> */}
+            <Category />
+            <Benefits/>
         </MainContainer>
 		
 			

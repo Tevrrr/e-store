@@ -8,21 +8,41 @@ import CategoryCart from '../../CategoryCart'
 const Category: NextPage = () => {
 
     return (
-		<Box pb={10}>
+
 			<Container maxWidth='lg'>
 				<Typography variant='h3' py={4} textAlign='center'>
 					Explore by Category
 				</Typography>
 				<Grid container spacing={2}>
-					<Grid item xs={12} sm={6}>
+					<Grid
+						item
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							gap: 2,
+						}}
+						xs={12}
+						sm={6}>
+						<CategoryCart />
+						<CategoryCart />
 						<CategoryCart />
 					</Grid>
-					<Grid item xs={12} sm={6}>
+					<Grid
+						item
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							gap: 2,
+						}}
+						xs={12}
+						sm={6}>
+						<CategoryCart />
+						<CategoryCart />
 						<CategoryCart />
 					</Grid>
 				</Grid>
 			</Container>
-		</Box>
+
 	);
 }
 

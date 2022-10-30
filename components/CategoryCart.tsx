@@ -8,7 +8,7 @@ interface CategoryCartProps {};
 const CategoryCart: NextPage<CategoryCartProps> = () => {
 
     return (
-		<Card
+        <Card
 			sx={{
 				minWidth: 275,
 				height: 275,
@@ -31,7 +31,7 @@ const CategoryCart: NextPage<CategoryCartProps> = () => {
                     zIndex:2
 				}}>
 				<Typography variant='h2' color='Background'>Keyboard</Typography>
-				<Button variant='contained' color='success'>
+				<Button variant='contained' color='primary'>
 					Explore
 				</Button>
 			</Box>
