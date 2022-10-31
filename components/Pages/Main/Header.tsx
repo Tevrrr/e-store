@@ -28,27 +28,7 @@ const Header: NextPage = () => {
 					style={{ objectFit: 'cover' }}
 				/>
 			</Box>
-            <Grid container direction={{ sm: 'row-reverse' }} height='100vh'>
-				<Grid
-					item
-					md={8}
-					sm={6}
-					xs={12}
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'center',
-						alignItems: 'center',
-						gap: 2,
-					}}
-					pt={10}>
-					<Typography variant='h1' color='Background'>
-						<GiBoltEye size='1.3em' />
-					</Typography>
-					<Typography variant='h1' color='Background'>
-						E-Store
-					</Typography>
-				</Grid>
+			<Grid container height='100vh'>
 				<Grid
 					item
 					md={4}
@@ -76,6 +56,25 @@ const Header: NextPage = () => {
 					<Button variant='contained' color='primary'>
 						Shop Now
 					</Button>
+				</Grid>
+				<Grid
+					item
+					md={8}
+					sm={6}
+					sx={{
+						display: { sm: 'flex', xs: 'none' },
+						flexDirection: 'column',
+						justifyContent: 'center',
+						alignItems: 'center',
+						gap: 2,
+					}}
+					pt={10}>
+					<Typography variant='h1' color='Background'>
+						<GiBoltEye size='1.3em' />
+					</Typography>
+					<Typography variant='h1' color='Background'>
+						E-Store
+					</Typography>
 				</Grid>
 			</Grid>
 		</header>
