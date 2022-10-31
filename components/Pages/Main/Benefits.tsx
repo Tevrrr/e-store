@@ -1,26 +1,19 @@
-import type { NextPage } from 'next'
-import Typography from '@mui/material/Typography'
+/** @format */
+
+import type { NextPage } from 'next';
+import Typography from '@mui/material/Typography';
 import { Box, Container, Grid, useTheme } from '@mui/material';
 import { FaMoneyCheck } from 'react-icons/fa';
 import { TbTruckReturn } from 'react-icons/tb';
 import { BiSupport } from 'react-icons/bi';
+import InfoBox from '../../InfoBox';
 
 const Benefits: NextPage = () => {
-    const theme = useTheme();
+
     
-    return (
-		<Box
-			sx={{
-				bgcolor: theme.palette.mode === 'light'
-						? theme.palette.success.main
-						: theme.palette.action.hover,
-				color:
-					theme.palette.mode === 'light'
-						? theme.palette.primary.dark
-						: '',
-				py: 5,
-				mt: 10,
-			}}>
+
+	return (
+		<InfoBox sx={{ py: 5, mt: 10,}}>
 			<Container maxWidth='lg'>
 				<Typography variant='h3' textAlign='center'>
 					Benefits for your expediency
@@ -58,8 +51,8 @@ const Benefits: NextPage = () => {
 					</Grid>
 				</Grid>
 			</Container>
-		</Box>
+		</InfoBox>
 	);
-}
+};
 
 export default Benefits;

@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { GiBoltEye } from 'react-icons/gi';
+import {blueGrey} from '@mui/material/colors'
 
 const Header: NextPage = () => {
 	return (
@@ -18,6 +19,7 @@ const Header: NextPage = () => {
 					width: '100%',
 					height: '100vh',
 					zIndex: -1,
+					bgcolor: blueGrey[900],
 				}}>
 				<Image
 					src={HeaderImg}
@@ -26,10 +28,31 @@ const Header: NextPage = () => {
 					style={{ objectFit: 'cover' }}
 				/>
 			</Box>
-			<Grid container height='100vh'>
+            <Grid container direction={{ sm: 'row-reverse' }} height='100vh'>
+				<Grid
+					item
+					md={8}
+					sm={6}
+					xs={12}
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						justifyContent: 'center',
+						alignItems: 'center',
+						gap: 2,
+					}}
+					pt={10}>
+					<Typography variant='h1' color='Background'>
+						<GiBoltEye size='1.3em' />
+					</Typography>
+					<Typography variant='h1' color='Background'>
+						E-Store
+					</Typography>
+				</Grid>
 				<Grid
 					item
 					md={4}
+					sm={6}
 					xs={12}
 					pt={10}
 					px={5}
@@ -53,24 +76,6 @@ const Header: NextPage = () => {
 					<Button variant='contained' color='primary'>
 						Shop Now
 					</Button>
-				</Grid>
-				<Grid
-					item
-					md={8}
-					sx={{
-                        display: {xs:'none', md:'flex'},
-						flexDirection: 'column',
-						justifyContent: 'center',
-						alignItems: 'center',
-						gap: 2,
-					}}
-					pt={10}>
-					<Typography variant='h1' color='Background'>
-						<GiBoltEye size='1.3em' />
-					</Typography>
-					<Typography variant='h1' color='Background'>
-						E-Store
-					</Typography>
 				</Grid>
 			</Grid>
 		</header>
