@@ -4,6 +4,7 @@ import { CssBaseline } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { ReactNode } from 'react';
+import Footer from './Footer';
 import Navbar from './Navbar';
 import ThemeModeProvider from './ThemeModeProvider';
 interface MainContainerProps {
@@ -24,6 +25,7 @@ const MainContainer: NextPage<MainContainerProps> = ({
 				<CssBaseline />
 				<Navbar />
 				{children}
+				<Footer />
 			</ThemeModeProvider>
 		</>
 	);

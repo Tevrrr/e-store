@@ -10,25 +10,25 @@ interface ThemeModeProviderProps {
 }
 
 const getDesignTokens = (mode: PaletteMode) => ({
-    palette: {
-        mode,
-        ... {
-
-            primary: {
-                main: '#70908B',
-                dark: '#07484A',
-            },
-            secondary: {
-                main: '#EEEBFF',
-                dark: '#FFF4E7',
-                light: '#FDFBF8',
-            },
-            success: {
-                main: '#CAF3E5',
-            },
-        }
-    }
-})
+	palette: {
+		mode,
+		...{
+			primary: {
+				main: '#70908B',
+				dark: '#07484A',
+				light: '#F3F6F5',
+			},
+			secondary: {
+				main: '#EEEBFF',
+				dark: '#FFF4E7',
+				light: '#FDFBF8',
+			},
+			success: {
+				main: '#CAF3E5',
+			},
+		},
+	},
+});
 
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
