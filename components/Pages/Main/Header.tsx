@@ -8,7 +8,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { GiBoltEye } from 'react-icons/gi';
-import {blueGrey} from '@mui/material/colors'
+import { blueGrey } from '@mui/material/colors'
+import { motion} from 'framer-motion'
 
 const Header: NextPage = () => {
 	return (
@@ -30,7 +31,8 @@ const Header: NextPage = () => {
 			</Box>
 			<Grid container height='100vh'>
 				<Grid
-					item
+                    item
+                    component={motion.div}
 					md={4}
 					sm={6}
 					xs={12}
@@ -38,24 +40,29 @@ const Header: NextPage = () => {
 					px={5}
 					sx={{
 						bgcolor: '#0004',
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'center',
-						alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
 						gap: 2,
-					}}>
-					<Typography
-						variant='h4'
-						textAlign='center'
-						color='Background'>
-						Exclusive offers of the latest computer technology
-					</Typography>
-					<Typography variant='body1' color='Background'>
-						Explore different categories. Find the best deals.
-					</Typography>
-					<Button variant='contained' color='primary'>
-						Shop Now
-					</Button>
+                    }}
+                    initial={{ opacity: 0, x: -100 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.5 }}>
+					
+						<Typography
+							variant='h4'
+							textAlign='center'
+							color='Background'>
+							Exclusive offers of the latest computer technology
+						</Typography>
+						<Typography variant='body1' color='Background'>
+							Explore different categories. Find the best deals.
+						</Typography>
+						<Button variant='contained' color='primary'>
+							Shop Now
+						</Button>
+
 				</Grid>
 				<Grid
 					item

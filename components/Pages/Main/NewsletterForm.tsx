@@ -4,14 +4,18 @@ import Cover from '../../../public/christin-hume-Hcfwew744z4-unsplash.jpg';
 import Image from 'next/image';
 import { Box, Typography, Button, TextField } from '@mui/material';
 import InfoBox from '../../InfoBox';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 const NewsletterForm: NextPage = () => {
+         const ref = useRef(null);
+			const isInView = useInView(ref, {
+				once: true,
+				amount: 0.2,
+			});
 
     return (
 		<InfoBox>
-			<Grid
-				container
-				columnSpacing={10}
-				>
+			<Grid container columnSpacing={10}>
 				<Grid
 					item
 					md={6}
@@ -34,14 +38,24 @@ const NewsletterForm: NextPage = () => {
 						/>
 					</Box>
 				</Grid>
-				<Grid item md={6} xs={12}>
+				<Grid
+					ref={ref}
+					sx={{
+						transform: isInView ? 'none' : 'translateY(20%)',
+						opacity: isInView ? 1 : 0,
+						transition:
+							'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+					}}
+					item
+					md={6}
+					xs={12}>
 					<Box
 						sx={{
 							p: 3,
 							display: 'flex',
 							flexDirection: 'column',
-                            alignItems: { xs: 'center', sm: 'flex-start' },
-                            textAlign: {xs:'center', sm:'left'}
+							alignItems: { xs: 'center', sm: 'flex-start' },
+							textAlign: { xs: 'center', sm: 'left' },
 						}}>
 						<Typography variant='h2'>Join Our</Typography>
 						<Typography variant='h3'>Newsletter</Typography>

@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import type { NextPage } from 'next'
-import Avatar from '../public/Znachenie-imeni-Adrian.jpg';
+import Avatar from '../../../public/Znachenie-imeni-Adrian.jpg';
 import Image from 'next/image';
 interface ReviewProps {};
 

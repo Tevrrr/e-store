@@ -1,6 +1,6 @@
 import { Box,  Typography, Grid, Container  } from '@mui/material';
 import type { NextPage } from 'next'
-import Review from '../../Review';
+import Review from './Review';
 
 const Testimonials: NextPage = () => {
 
